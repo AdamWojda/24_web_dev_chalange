@@ -161,6 +161,9 @@
         $(this).toggleClass('is-active');
         $('#main-header .m-navigation').toggleClass('is-active');
         $('#main-header').addClass('l-header--color');
+        if (document.body.scrollTop === 0 && !$('#main-header .m-navigation').hasClass('is-active')) {
+            $('#main-header').removeClass('l-header--color');
+        }
     });
 
     function checkTop() {
