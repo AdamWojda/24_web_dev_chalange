@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+
+// Variables
+@import 'settings/colors',
+        'settings/z-index';
+
+// Mixins, functions, tools
+@import 'tools/mixins',
+        'tools/fonts',
+        'tools/family';
+
+// Generic like reset or normalize
+@import 'generic/reset';
+
+// Element selectors, without classes
+@import 'elements/base',
+        'elements/text';
+// Layouts
+@import 'layout/container',
+        'layout/header',
+        'layout/intro',
+        'layout/blog',
+        'layout/categories',
+        'layout/navigation',
+        'layout/newsletter',
+        'layout/trending-items';
+
+// Components
+@import 'components/button',
+        'components/title',
+        'components/list',
+        'components/link';
+
+// Modules
+ @import 'module/navigation',
+         'module/slider',
+         'module/categories',
+         'module/sales',
+         'module/blog',
+         'module/newsletter',
+         'module/product',
+         'module/footer',
+         'module/logo';
+
+/* ==================================================================================================== */
+/* External CSS
+/* ==================================================================================================== */
+
+// Vendor
+@import 'vendor/bootstrap',
+        'vendor/owl.carousel';

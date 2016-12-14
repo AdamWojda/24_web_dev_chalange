@@ -1,0 +1,61 @@
+/*
+* @name Sliders
+* @section Modules
+* @description
+*  Site sliders
+*/
+
+.m-slider {
+
+    &__item {
+        position: relative;
+
+
+
+        .c-title {
+
+            &--category:first-child {
+                letter-spacing: 9px;
+            }
+
+            &--bold {
+                margin: 38px 0;
+            }
+
+        }
+
+
+
+    }
+
+    .owl {
+
+        &-controls {
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        &-dots {
+            text-align: center;
+        }
+
+        &-dot {
+            width: 12px;
+            height: 12px;
+            background: $color-white;
+            display: inline-block;
+            border-radius: 12px;
+            margin-right: 10px;
+
+            &.active {
+                background: transparent;
+                box-shadow: 0 0 0 2px $color-white;
+            }
+        }
+
+    }
+
+}

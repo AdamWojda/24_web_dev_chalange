@@ -1,0 +1,55 @@
+/*
+* @name Nagłówek
+* @section Layouty
+* @description
+*  Headers
+*/
+
+.l-header {
+    $root: &;
+    z-index: map-get($depth, header);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    padding: 28px 0;
+    transition: background .3s ease-in;
+
+
+    &--color {
+        background: rgba($color-white, .8);
+
+        .m-navigation__link {
+            color: $color-shaft;
+
+            &:hover {
+                color: #969696;
+            }
+        }
+    }
+
+    .l-navigation {
+        display: inline-block;
+        vertical-align: middle;
+
+        /* PixelPerfect */
+        padding-right: 1px;
+        margin-top: -5px;
+    }
+
+    .flexboxlegacy & .l-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .flexboxlegacy & .l-navigation {
+        flex: 1;
+        text-align: right;
+    }
+
+    .no-flexboxlegacy & .m-navigation {
+        float: right;
+    }
+
+}

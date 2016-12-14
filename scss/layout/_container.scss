@@ -1,0 +1,19 @@
+/*
+* @name Container
+* @section Layouts
+* @description
+*  Site conteners
+*/
+
+.l-container {
+    $root: &;
+
+  	@include clearfix;
+  	margin: 0 auto;
+  	position: relative;
+
+    &--inner {
+        max-width: 1172px;
+    }
+
+}
