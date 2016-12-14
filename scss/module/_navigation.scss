@@ -7,6 +7,23 @@
 
 .m-navigation {
     $root: &;
+
+    @include  breakpoint($md) {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: rgba($color-white, .9);
+        transition: all .2s linear;
+        opacity: 0;
+        visibility: hidden;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__list {
         @include inline-block();
     }
@@ -28,6 +45,29 @@
 
             &:hover {
                 color: rgba($color-white, .8);
+            }
+        }
+
+        @include  breakpoint($lgx) {
+            margin-right: 45px;
+        }
+
+        @include  breakpoint($xs) {
+            margin-right: 17px;
+        }
+
+        @include  breakpoint($md) {
+            margin-right: 0;
+            width: 100%;
+            text-align: left;
+            padding: 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color-silver-chalice;
+            margin-bottom: 10px;
+
+            &:last-child {
+                border-bottom: 0;
+                margin-bottom: 0;
             }
         }
     }

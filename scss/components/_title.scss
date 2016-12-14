@@ -34,12 +34,28 @@
         font-size: 30px;
         font-weight: 300;
         text-transform: uppercase;
+
+        @include  breakpoint($mega) {
+            font-size: 20px;
+        }
+
+        @include  breakpoint($medium) {
+            font-size: 15px;
+        }
     }
 
     &--bold {
         font-family: "Lato";
         font-weight: 900;
         font-size: 60px;
+
+        @include  breakpoint($mega) {
+            font-size: 45px;
+        }
+
+        @include  breakpoint($medium) {
+            font-size: 30px;
+        }
     }
 
     &--lines {
@@ -83,5 +99,9 @@
         color: $color-monza;
         font-size: 30px;
         text-transform: uppercase;
+
+        @include  breakpoint($lgx) {
+            font-size: 20px;
+        }
     }
 }

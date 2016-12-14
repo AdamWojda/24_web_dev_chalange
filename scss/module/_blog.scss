@@ -32,6 +32,10 @@
             font-size: 18px;
             letter-spacing: -.33px;
             line-height: 1.4;
+
+            @include  breakpoint($lgx) {
+                font-size: 16px;
+            }
         }
 
     }

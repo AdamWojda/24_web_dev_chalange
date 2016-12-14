@@ -70,12 +70,30 @@
             transform: translateY(-50%);
             text-align: center;
             color: $color-white;
+
+
+
+            @include  breakpoint($md) {
+                max-width: 334px;
+                margin: 0 auto;
+                line-height: 1.2;
+            }
+
         }
 
         .c-button {
             margin-top: 30px;
             position: relative;
             top: 22px;
+        }
+
+        &__background {
+
+            @include  breakpoint($mega) {
+                min-height: 705px;
+                object-fit: cover;
+            }
+
         }
 
     }

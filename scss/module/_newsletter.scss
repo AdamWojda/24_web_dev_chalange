@@ -16,6 +16,12 @@
         color: $color-white;
         position: relative;
         z-index: 5;
+
+        @include  breakpoint($small) {
+            background: url(../img/email.png) no-repeat 10px center;
+            padding: 17px 20px 17px 37px;
+        }
+
     }
 
     &__label {
@@ -27,6 +33,10 @@
         transform: translate(0, -50%);
         left: 81px;
         transition: top .5s ease-out;
+
+        @include  breakpoint($small) {
+            left: 41px;
+        }
     }
 
     &__input:focus + &__label,
@@ -36,8 +46,13 @@
 
     &__left {
         position: relative;
-        padding-right: 129px;
+        padding-right: 11%;
         overflow: hidden;
+
+        @include  breakpoint($xs) {
+            padding-right: 0;
+        }
+
     }
 
     &__submit {
@@ -48,10 +63,16 @@
         text-transform: uppercase;
         font-weight: 700;
         font-size: 18px;
-        width: 270px;
+        width: 22.5%;
         margin-right: 2px;
         cursor: pointer;
         transition: background .2s linear;
+
+        @include  breakpoint($xs) {
+            min-width: 95px;
+            font-size: 14px;
+            padding: 18px 0 17px;
+        }
 
         &:hover {
             background: $color-mine-shaft;
@@ -61,6 +82,21 @@
 
     &__form {
         margin-top: 29px;
+    }
+
+    .c-title {
+
+        &--small {
+
+            @include  breakpoint($xs) {
+                text-align: center;
+                line-height: 1.6;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+        }
+
     }
 
 }

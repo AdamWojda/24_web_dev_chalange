@@ -10,6 +10,10 @@
     margin-top: 69px;
     margin-bottom: 33px;
 
+    @include  breakpoint($md) {
+        margin-top: 20px;
+    }
+
     &__text {
         font-family: "Lato";
         color: rgba($color-mine-shaft, .6);

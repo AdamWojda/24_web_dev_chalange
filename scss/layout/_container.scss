@@ -14,6 +14,10 @@
 
     &--inner {
         max-width: 1172px;
+
+        @include  breakpoint($lgx) {
+            padding: 0 20px;
+        }
     }
 
 }

@@ -27,10 +27,38 @@
         &:last-child {
             margin-right: 0;
         }
+
+        @include  breakpoint($lgx) {
+            margin-right: 3%;
+            width: 48.5%;
+        }
+
+        @include  breakpoint($xs) {
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image {
+
+        @include  breakpoint($xs) {
+            width: 100%;
+            object-fit: cover
+        }
+
     }
 
     &__element:hover &__text {
         font-size: 47px;
+
+        @include  breakpoint($lgx) {
+            font-size: 40px;
+        }
+
+        @include  breakpoint($small) {
+            font-size: 27px;
+        }
 
         &:after{
             left: -20px;
@@ -55,6 +83,14 @@
         line-height: 1.2;
         position: relative;
         transition: all .2s linear;
+
+        @include  breakpoint($lgx) {
+            font-size: 35px;
+        }
+
+        @include  breakpoint($small) {
+            font-size: 25px;
+        }
 
         &:after,
         &:before {

@@ -25,10 +25,45 @@
         &:hover:before {
             background: rgba($color-ebony-clay, .9);
         }
+
+        @include  breakpoint($lgx) {
+            margin-right: 3%;
+            width: 31.3%;
+        }
+
+        @include  breakpoint($xs) {
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
     }
 
     &__element:hover &__content {
         font-size: 45px;
+
+        @include  breakpoint($lgx) {
+            font-size: 35px;
+        }
+    }
+
+    &__image {
+
+        @include  breakpoint($xs) {
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            max-height: 400px;
+        }
+
+    }
+
+    &__element:last-child &__image {
+
+        @include  breakpoint($xs) {
+            object-position: center;
+        }
+        
     }
 
     &__element:hover &__line {
@@ -71,6 +106,10 @@
         font-style: italic;
         font-weight: 300;
         transition: all .2s linear;
+
+        @include  breakpoint($lgx) {
+            font-size: 30px;
+        }
     }
 
     &__line {

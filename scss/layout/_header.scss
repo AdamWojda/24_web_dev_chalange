@@ -18,13 +18,19 @@
 
 
     &--color {
-        background: rgba($color-white, .8);
+        background: rgba($color-white, .9);
 
         .m-navigation__link {
             color: $color-shaft;
 
             &:hover {
                 color: #969696;
+            }
+        }
+
+        .m-hamburger {
+            &__line {
+                background: $color-mine-shaft;
             }
         }
     }

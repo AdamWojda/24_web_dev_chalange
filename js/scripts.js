@@ -2,7 +2,7 @@
 'use strict';
 
 (function() {
-    
+
     //---- Module - Scroll to anchor ----//
     var scrollToAnchor = {
         listContainer: $('[data-scroll-to-anchor]'),
@@ -121,11 +121,16 @@
 
                 case 'blog':
                     carousel_settings = {
-                        items: 2,
+                        items: 1,
                         margin: 30,
                         dots: false,
                         nav: true,
                         loop: true,
+                        responsive : {
+                            768 : {
+                                items: 2,
+                            }
+                        }
                     };
                     break;
 
@@ -152,21 +157,21 @@
         $(this).toggleClass('has-value')
     });
 
+    $('#hamburger-menu').click(function(){
+        $(this).toggleClass('is-active');
+        $('#main-header .m-navigation').toggleClass('is-active');
+        $('#main-header').addClass('l-header--color');
+    });
+
     function checkTop() {
 
         var main_header = $('#main-header'),
             color_class = 'l-header--color';
 
         if (document.body.scrollTop !== 0) {
-            main_header.css({
-                "background": "rgba(255, 255, 255, .9)"
-            }, 250);
             main_header.addClass(color_class)
         }
-        if (document.body.scrollTop === 0) {
-            main_header.css({
-                "background": "transparent"
-            }, 250);
+        if (document.body.scrollTop === 0 && !$('#main-header .m-navigation').hasClass('is-active')) {
             main_header.removeClass(color_class)
         }
 
