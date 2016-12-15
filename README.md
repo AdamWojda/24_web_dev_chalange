@@ -1,5 +1,5 @@
 # Brand LY
-## 24 Weekly Web Dev Challange
+## 24 Weekly Web Dev Challange (https://adamwojda.github.io/24_web_dev_challenge/)
 
 
 ### Support
